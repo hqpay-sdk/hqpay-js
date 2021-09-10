@@ -25,11 +25,12 @@
                     <span>请选择支付方式：</span>
                 </div>
                 <div class="ch">
-                    <span class="up" onclick="hq_pay('app')"><span class="button">app</span></span>
-                    <span class="up" onclick="hq_pay('pc')"><span class="button">pc</span></span>
-                    <span class="up" onclick="hq_pay('pub')"><span class="button">pub</span></span>
-                    <span class="up" onclick="hq_pay('qr')"><span class="button">qr</span></span>
-                    <span class="up" onclick="hq_pay('wap')"><span class="button">wap</span></span>
+                    <span class="up" onclick="hq_pay('app')"><span class="button">APP支付(app)</span></span>
+                    <span class="up" onclick="hq_pay('pc')"><span class="button">扫码支付(pc)</span></span>
+                    <span class="up" onclick="hq_pay('pub')"><span class="button">公众号支付(pub)</span></span>
+                    <span class="up" onclick="hq_pay('qr')"><span class="button">收款码/条码支付(qr)</span></span>
+                    <span class="up" onclick="hq_pay('wap')"><span class="button">H5支付(wap)</span></span>
+                       
                 </div>
                 <div class="qrcode_div">
                     <div class="pw-box-hd" id="qrcode"></div>
@@ -114,7 +115,7 @@
         -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.045);
         box-shadow: 0 2px 0 rgba(0, 0, 0, 0.045);
         border-radius: 6px;
-        width: 88px;
+        width: 146px;
         height: 35px;
         line-height: 35px;
     }
@@ -251,7 +252,7 @@
     }
 
     .ch {
-        width: 50%;
+        width: 70%;
         margin: auto;
         height: auto;
         overflow: hidden;
@@ -328,7 +329,7 @@
         background-color: #f7f7f7;
     }
 
-    @media (max-width: 960px) {
+    @media (max-width: 1090px) {
         .ch .up {
             margin-right: 10%;
         }
@@ -378,7 +379,7 @@
         z-index: 1000;
     }
 
-    @media (max-width: 640px) {
+    @media (max-width: 835px) {
 
         .text_tradeNo {
             display: block;
