@@ -6,10 +6,10 @@
 
 ### 步骤
 1. 点击创建订单按钮，进入接口文档，      
+   - 参数`AppId`填写 `2020031817080851687`
+   - 参数`Authorization`填写`dVLulrMjORizeuXxdmRWNyizlQwygb`
    - 修改参数`out_trade_no`
    - 修改有效期参数`time_expire`
-   - 参数`AppId`填写 `317`
-   - 参数`Authorization`填写`uOcGzsnrDLqGegvSQGjYnyncVvJZMS`
    - 点击`试一下`按钮，获取交易号`tradeNo`
 2. 选择相应支付方式进行支付
 ## 注意事项
