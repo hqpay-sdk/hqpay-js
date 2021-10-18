@@ -25,7 +25,7 @@
                     <span>请选择支付方式：</span>
                 </div>
                 <div class="ch">
-                    <span class="up" onclick="hq_pay('applet')"><span class="button">小程序支付(wx)</span></span>
+                    <span class="up" onclick="hq_pay('lite')"><span class="button">小程序支付(wx)</span></span>
                     <span class="up" onclick="hq_pay('app')"><span class="button">APP支付(app)</span></span>
                     <span class="up" onclick="hq_pay('pc')"><span class="button">扫码支付(pc)</span></span>
                     <span class="up" onclick="hq_pay('pub')"><span class="button">公众号支付(pub)</span></span>
@@ -76,8 +76,8 @@
                 case 'wap':
                     window.location.href = `${default_url}demo/demo-wap.html`;
                     break
-                case 'applet':
-                    window.location.href = `${default_url}demo/demo-applet.html`;
+                case 'lite':
+                    window.location.href = `${default_url}demo/demo-lite.html`;
                     break
                 case 'create':
                     window.open(
