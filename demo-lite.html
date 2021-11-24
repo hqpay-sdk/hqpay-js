@@ -29,8 +29,7 @@
           <input id="code" type="text" placeholder="微信登录凭证" />
         </label>
         <div class="ch">
-          <!-- <span class="up" onclick="hq_pay('ALIPAY_APP')"><span class="button">支付宝支付</span></span> -->
-          <span class="up" onclick="hq_pay('WX_APP')"><span class="button">微信支付</span></span>
+          <span class="up" onclick="hq_pay('WX_LITE')"><span class="button">微信小程序支付</span></span>
         </div>
         <div class="qrcode_div">
           <div class="qrcode_div_div" id="qrcode"></div>
@@ -54,7 +53,7 @@
         return
       }
       let url =
-        `${default_url}business-platform.payment-channel.web/hqpay/apay/app?channel_pay_type=${channel}&trade_no=${tradeNo}&code=${code}`
+        `${default_url}business-platform.payment-channel.web/hqpay/apay/lite?channel_pay_type=${channel}&trade_no=${tradeNo}&code=${code}`
       postRequest(url).then(res => {
         let temp = JSON.parse(res)
         postRequest(temp.content.get_appstring_url).then(qrcode_url_res => {
@@ -63,7 +62,8 @@
           console.log(error)
         })
       }).catch(error => {
-        console.log(error)
+  		console.log(error)
+  		// alert(JSON.stringify(error))
       })
     }
     // 调用接口方法
@@ -73,11 +73,15 @@
           type: "GET",
           url,
           dataType: 'text',
+  		  async : false,
           success: function (msg) {
+  			  console.log(msg)
+			  alert(msg)
             resolve(msg)
           },
           error: function (msg) {
-            reject(msg)
+  			  console.log(msg)
+//            reject(msg)
           }
         });
       })

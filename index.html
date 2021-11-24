@@ -29,7 +29,8 @@
                     <span class="up" onclick="hq_pay('app')"><span class="button">APP支付(app)</span></span>
                     <span class="up" onclick="hq_pay('pc')"><span class="button">扫码支付(pc)</span></span>
                     <span class="up" onclick="hq_pay('pub')"><span class="button">公众号支付(pub)</span></span>
-                    <span class="up" onclick="hq_pay('qr')"><span class="button">收款码/条码支付(qr)</span></span>
+                    <span class="up" onclick="hq_pay('qr')"><span class="button">扫码支付(用户主扫qr)</span></span>
+                    <span class="up" onclick="hq_pay('micro')"><span class="button">条码支付(用户被扫)</span></span>
                     <span class="up" onclick="hq_pay('wap')"><span class="button">H5支付(wap)</span></span>
                        
                 </div>
@@ -72,6 +73,9 @@
                     break
                 case 'qr':
                     window.location.href = `${default_url}demo/demo-qr.html`;
+                    break
+                case 'micro':
+                    window.location.href = `${default_url}demo/demo-micro.html`;
                     break
                 case 'wap':
                     window.location.href = `${default_url}demo/demo-wap.html`;
